@@ -1,5 +1,8 @@
 ---
 title: 博客迁移
+sticky: 999
+tags: "tags"
+# categories: "categories"
 abbrlink: 53348
 ---
 
