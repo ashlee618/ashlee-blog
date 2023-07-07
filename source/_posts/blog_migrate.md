@@ -2,7 +2,7 @@
 title: 博客迁移
 sticky: 999
 tags: "tags"
-# categories: "categories"
+#categories: "博客维护"
 abbrlink: 53348
 ---
 
