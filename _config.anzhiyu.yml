@@ -662,7 +662,7 @@ hr_icon:
 
 # the subtitle on homepage (主页subtitle)
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect (打字效果)
   effect: true
   # Effect Speed Options (打字效果速度参数)
@@ -710,7 +710,7 @@ aside:
   card_author:
     enable: true
     type: 2 # 1为使用头像card 2为不使用头像card
-    description: # 默认为站点描述
+    description: 保持热情 keep passion!
     info_background: https://bu.dusays.com/2023/04/23/6444b2b59a295.webp # type为1时有效
     button:
       enable: true
@@ -719,7 +719,7 @@ aside:
       link: /about/
   card_announcement:
     enable: true
-    content: 欢迎来看我的博客鸭~
+    content: 请用邮箱联系我吧!<br/>每天晚上10点-11点都会在bilibili直播我的学习过程<br/>💌：ashleebcrq@gmail.com<br/>🎥：live.bilibili.com/26342335
   card_weixin:
     # 微信
     enable: false
@@ -943,7 +943,7 @@ home_top:
   timemode: date #date/updated
   title: keep foolish
   subTitle: keep hungry
-  siteText: keep excited🔥
+  siteText: keep passion🔥
   category:
     - name: 技术
       path: /categories/技术分享/
