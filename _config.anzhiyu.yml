@@ -276,19 +276,19 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Valine/Waline/Twikoo/Artalk
-  use: # Twikoo/Waline
+  use: Valine # Twikoo/Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
-  count: false # Display comment count in post's top_img
-  card_post_count: false # Display comment count in Home Page
+  lazyload: true
+  count: true # Display comment count in post's top_img
+  card_post_count: true # Display comment count in Home Page
 
 # valine
 # https://valine.js.org
 valine:
-  appId: xxxxx # leancloud application app id
-  appKey: xxxxx # leancloud application app key
+  appId: iClBzUdjP4qHzbUUbvvumyUf-gzGzoHsz # leancloud application app id
+  appKey: kwpCiGYl3qPHK8ohIug3YIPD # leancloud application app key
   pageSize: 10 # comment list page size
   avatar: mp # gravatar style https://valine.js.org/#/avatar
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
