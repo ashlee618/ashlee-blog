@@ -719,7 +719,7 @@ aside:
       link: /about/
   card_announcement:
     enable: true
-    content: 请用邮箱联系我吧!<br/>每天晚上10点-11点都会在bilibili直播我的学习过程<br/>💌：ashleebcrq@gmail.com<br/>🎥：<a href="https://live.bilibili.com/26342335">live.bilibili.com/26342335</a>
+    content: 请用邮箱联系我吧!<br/>每天晚上10点-11点都会在bilibili直播我的学习过程<br/>💌:ashleebcrq@gmail.com<br/>🎥:<a href="https://live.bilibili.com/26342335">live.bilibili.com/26342335</a>
   card_weixin:
     # 微信
     enable: false
@@ -728,17 +728,17 @@ aside:
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
-    sort: date # date or updated
+    sort: updated # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
     enable: true
     limit: 8 # if set 0 will show all
-    expand: none # none/true/false
+    expand: true # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
       # - Hexo
