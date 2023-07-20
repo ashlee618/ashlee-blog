@@ -945,8 +945,8 @@ home_top:
   subTitle: stay hungry
   siteText: stay passion🔥
   category:
-    - name: 技术
-      path: /categories/技术分享/
+    - name: 精选文章
+      path: /categories/精选/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
