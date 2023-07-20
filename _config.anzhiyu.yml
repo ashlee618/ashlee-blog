@@ -728,12 +728,12 @@ aside:
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
-    sort: updated # date or updated
+    sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
     enable: true
     limit: 8 # if set 0 will show all
-    expand: true # none/true/false
+    expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
