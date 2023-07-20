@@ -710,7 +710,7 @@ aside:
   card_author:
     enable: true
     type: 1 # 1为使用头像card 2为不使用头像card
-    description: 保持热情 keep passion!
+    description: 保持热情 stay passion!
     info_background: https://bu.dusays.com/2023/04/23/6444b2b59a295.webp # type为1时有效
     button:
       enable: true
@@ -941,9 +941,9 @@ css_prefix: true
 home_top:
   enable: true # 开关
   timemode: date #date/updated
-  title: keep foolish
-  subTitle: keep hungry
-  siteText: keep passion🔥
+  title: stay foolish
+  subTitle: stay hungry
+  siteText: stay passion🔥
   category:
     - name: 技术
       path: /categories/技术分享/
