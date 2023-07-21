@@ -1,5 +1,5 @@
 ---
-title: 博客迁移通知
+title: 博客迁移完成通知
 sticky: 999
 #tags: "tags"
 #categories: "博客维护"
