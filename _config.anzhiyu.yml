@@ -1097,6 +1097,7 @@ inject:
   head:
     # 自定义css
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/about-tag.css"> # 关于页悬浮小标签
 
   bottom:
     # 自定义js
