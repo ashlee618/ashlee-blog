@@ -692,7 +692,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: # 自定义头像
+  avatar: https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307222210872.jpeg
 
 # aside (侧边栏)
 # --------------------------------------
