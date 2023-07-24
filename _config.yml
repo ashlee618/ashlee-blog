@@ -11,6 +11,9 @@ author: Ashlee
 language: zh-CN
 timezone: ''
 
+plugins:
+  - hexo-algoliasearch
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://www.hongminfeng.top/
@@ -103,3 +106,19 @@ theme: anzhiyu
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+algolia:
+  appId: "05HL7BYB04"
+  apiKey: "2e2d4b6018aa24ed7b0b3cb7ffa50749"
+  adminApiKey: "449095262369012f366bfea4adc309a9"
+  chunkSize: 5000
+  indexName: "hexo"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
