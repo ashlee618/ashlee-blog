@@ -8,7 +8,6 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091752364.png
 abbrlink: 3997
-updated: 2023-07-19 10:54:43
 ---
 
 
@@ -66,11 +65,11 @@ updated: 2023-07-19 10:54:43
 # Redisson
 [github](https://github.com/redisson/redisson)
  redisson提出了一种看门狗的机制，可以对锁进行续命
- 
+
  源码基于当前最新版本的 Redisson v3.16.3
- 
+
  我们直接定位的核心代码： `scheduleExpirationRenewal`方法
- 
+
  ```java
 protected void scheduleExpirationRenewal(long threadId) {
     ExpirationEntry entry = new ExpirationEntry();
@@ -156,7 +155,7 @@ protected void scheduleExpirationRenewal(long threadId) {
 他是新创建了一个子线程去反复调用；根据EntryName来去存放Entry的Map里面查，这个Entry在不在，如果不在说明被删除了，不需要再续命了，就不再调用；否则则会间隔执行 
 `internalLockLeaseTime` / 3个时间
 续命的操作，比较核心的就是执行`renewExpirationAsync`这个方法
- 
+
 ## renewExpirationAsync
 
 ``` java
@@ -173,7 +172,7 @@ protected RFuture<Boolean> renewExpirationAsync(long threadId) {
 ```
 redisson是通过lua脚本来实现语句锁续命，也就是给这个值的超时时间再延长一点，并且因为是lua脚本，所以他带有**原子性**
 ## cancelExpirationRenewal
- 
+
 
 
 当我们不需要续命的时候，就会调用`cancelExpirationRenewal`
@@ -204,11 +203,10 @@ protected void cancelExpirationRenewal(Long threadId) {
 
  ## 看门狗名字的由来
  我们去找找这个间隔时间 `internalLockLeasetime`的赋值
- 
+
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/28a8a05445ca4f89b27459ccedd12bf5~tplv-k3u1fbpfcp-watermark.image?)
 ``` java
 private long lockWatchdogTimeout = 30 * 1000;
 ```
 可以看到他默认是30秒的，也就是间隔10秒，就判断是否需要续命
-
 

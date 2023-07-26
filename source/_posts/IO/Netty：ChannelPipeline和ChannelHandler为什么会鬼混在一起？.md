@@ -7,7 +7,6 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091602399.png
 abbrlink: 41945
-updated: 2023-07-19 10:54:43
 ---
 
 
@@ -104,6 +103,7 @@ Unsafe本身是作为**Channel的一个内部辅助类**来用的，其实并不
 
     ***SPI和API的区别！还不懂的赶紧去复习，面试常考内容！***
     
+
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d80ae83866c4def9048d6b0ddb9a39f~tplv-k3u1fbpfcp-watermark.image?)
 
 2.  Netty的Channel能够跟Netty的整体架构融合在一起，**跟架构亲和力更足**。
