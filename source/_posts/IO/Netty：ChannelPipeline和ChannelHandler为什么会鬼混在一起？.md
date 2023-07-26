@@ -1,4 +1,4 @@
----
+﻿---
 title: Netty：ChannelPipeline和ChannelHandler为什么会鬼混在一起？
 categories: Netty
 tags:
@@ -7,7 +7,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091602399.png
 abbrlink: 41945
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 

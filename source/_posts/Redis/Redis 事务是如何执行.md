@@ -1,4 +1,4 @@
----
+﻿---
 title: Redis 事务是如何执行
 categories:
   - 缓存中间件
@@ -8,7 +8,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091752364.png
 abbrlink: 47020
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 # 前言 

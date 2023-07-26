@@ -1,4 +1,4 @@
----
+﻿---
 title: Netty：与AbstractByteBuf渐进式步进截然不同的扩容规则--AdaptiveRecvByteBufAllocator
 categories: Netty
 tags:
@@ -7,7 +7,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091602399.png
 abbrlink: 52287
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 

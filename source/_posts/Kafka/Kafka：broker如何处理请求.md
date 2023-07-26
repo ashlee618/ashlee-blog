@@ -1,4 +1,4 @@
----
+﻿---
 title: Kafka：broker如何处理请求
 categories:
   - 消息中间件
@@ -8,7 +8,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091722145.png
 abbrlink: 30977
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 # 前言

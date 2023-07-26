@@ -1,4 +1,4 @@
----
+﻿---
 title: Redis高可用集群方案 主从模式 哨兵模式 Cluster集群
 categories:
   - 缓存中间件
@@ -8,7 +8,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091752364.png
 abbrlink: 3767
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 # 前言

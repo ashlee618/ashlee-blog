@@ -1,4 +1,4 @@
----
+﻿---
 title: Netty：遇到TCP发送缓冲区满了 写半包操作该如何处理
 categories: Netty
 tags:
@@ -7,7 +7,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091602399.png
 abbrlink: 49726
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 

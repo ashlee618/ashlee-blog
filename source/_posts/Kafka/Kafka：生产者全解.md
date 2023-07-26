@@ -1,4 +1,4 @@
----
+﻿---
 title: Kafka：生产者全解
 categories:
   - 消息中间件
@@ -8,7 +8,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091722145.png
 abbrlink: 54024
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 

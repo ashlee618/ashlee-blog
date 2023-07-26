@@ -1,4 +1,4 @@
----
+﻿---
 title: 保姆级教程之Redis缓存穿透 缓存击穿 缓存雪崩 缓存预热 双写不一致
 categories:
   - 缓存中间件
@@ -8,7 +8,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091752364.png
 abbrlink: 6978
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 # 缓存引发的问题

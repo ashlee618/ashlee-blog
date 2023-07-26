@@ -1,4 +1,4 @@
----
+﻿---
 title: Netty框架内的宝藏：ByteBuf
 categories: Netty
 tags:
@@ -7,7 +7,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091602399.png
 abbrlink: 45077
+updated: 2023-07-19 10:54:43
 ---
+
 
 Netty框架是业内非常优秀的网络通信框架，本系列主要是通过介绍Netty里面优秀的组件设计，学一下高手的操作
 

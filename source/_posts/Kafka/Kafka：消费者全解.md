@@ -1,4 +1,4 @@
----
+﻿---
 title: Kafka：消费者全解
 categories:
   - 消息中间件
@@ -8,7 +8,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091722145.png
 abbrlink: 48794
+updated: 2023-07-19 10:54:43
 ---
+
 
 # 前言
 目前主流的MQ中间件都是基于**发布/订阅模式**实现，生产者生产消息到某个主题topic，消费者订阅了该topic后，当有消费写入该主题就可以进行消费。本篇主要介绍Kafka消费者，包括消费者群组以及遇到再均衡的情况及处理措施。

@@ -1,4 +1,4 @@
----
+﻿---
 title: 支持热插拔的ChannelHandler，了解一下
 categories: Netty
 tags:
@@ -7,7 +7,9 @@ tags:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307091602399.png
 abbrlink: 4805
+updated: 2023-07-19 10:54:43
 ---
+
 
 
 
