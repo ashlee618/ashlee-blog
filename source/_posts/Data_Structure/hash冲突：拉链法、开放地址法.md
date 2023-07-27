@@ -8,8 +8,10 @@ date: 2023-07-27 20:02:00
 updated: 2023-07-27 20:02:00
 ---
 
-# 哈希碰撞
 
+
+
+# 哈希碰撞
 > `哈希碰撞`也称`哈希冲突`。
 
 经过`哈希计算`之后得到**哈希值**，根据**哈希值**去找对应的**哈希槽**。
@@ -21,7 +23,7 @@ updated: 2023-07-27 20:02:00
 
 # 拉链法
 
-![image.png](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307272001398.png)
+![image.png](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307272024248.png)
 
 
 在 `HashMap` 采取的就是 **拉链法** 来解决哈希冲突。
@@ -30,8 +32,8 @@ updated: 2023-07-27 20:02:00
 
 
 # 开放地址法
+![image.png](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307272024835.png)
 
-![image.png](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307272001423.png)
 
 在 `ThreadLocal` 中采取的是 **开放地址法** 的方法来解决哈希冲突。
 
@@ -84,8 +86,8 @@ private static int nextIndex(int i, int len) {
 这里我们从拉链法的角度来讨论。
 
 >拉链法适合用于解决频繁产生哈希冲突的场景。
+>![image.png](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307272024771.png)
 
-![image.png](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307272001404.png)
 
 图中采用开放地址法， `23` 经过了 3轮探测才能找到他自己的位置，当堆积的元素足够多的时候，这里就是性能的瓶颈了。
 
@@ -133,6 +135,6 @@ private T setInitialValue() {
 开放地址法则反之。
 
 
-![\_ZW\$55A8PHP)%8HW6RVRV2E.gif](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202307272001833.gif)
+![\_ZW\$55A8PHP)%8HW6RVRV2E.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f53b6ba7b3b4dfda6919605175d7d43~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 来都来了，点个赞再走吧彦祖👍，这对我来说非常重要！
