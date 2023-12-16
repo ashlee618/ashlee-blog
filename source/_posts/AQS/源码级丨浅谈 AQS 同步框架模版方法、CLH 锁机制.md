@@ -1,15 +1,12 @@
 ---
-categories:
-  - '源码解读'
-cover: >-
-  https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202311172154410.webp
-title: 源码级丨浅谈 AQS 同步框架模版方法、CLH 锁机制
-abbrlink: 50623
+title: 源码级 | 浅谈 AQS 同步框架模版方法、CLH 锁机制
 date: 2023-11-17 21:52:18
 updated: 2023-11-17 21:52:18
-tags:
----
-
+#sticky: 999
+tags: "并发编程"
+categories: "源码解读"
+cover:https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202311172154410.webp
+--- 
 
 # 引言
 
@@ -196,6 +193,73 @@ public final void acquire(long arg) {
 但是另外一个是具体的一个 **共享资源对象**，这两者的 **竞争压力是完全不一样的**。
 
 而且当我 `CLH` 线程排好队了之后，以后的竞争压力就大大减少，性能就更加高效，所以我们说他是一个好东西。
+
+### CLH 队列
+
+>那么这个 队列 应该长什么样子捏？
+
+![image.png](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202312142224519.png)
+
+
+
+```java
+    /**
+     * Head of the wait queue, lazily initialized.  Except for
+     * initialization, it is modified only via method setHead.  Note:
+     * If head exists, its waitStatus is guaranteed not to be
+     * CANCELLED.
+     */
+    private transient volatile Node head;
+
+    /**
+     * Tail of the wait queue, lazily initialized.  Modified only via
+     * method enq to add new wait node.
+     */
+    private transient volatile Node tail;
+```
+
+我们可以在 `AQS` 看到它使用了2个 `Node` 节点维护的队列，并不是我们普通看到的那种队列容器。
+
+```java
+    static final class Node {
+        /** Marker to indicate a node is waiting in shared mode */
+        static final Node SHARED = new Node();
+        /** Marker to indicate a node is waiting in exclusive mode */
+        static final Node EXCLUSIVE = null;
+
+        /** waitStatus value to indicate thread has cancelled */
+        static final int CANCELLED =  1;
+        /** waitStatus value to indicate successor's thread needs unparking */
+        static final int SIGNAL    = -1;
+        /** waitStatus value to indicate thread is waiting on condition */
+        static final int CONDITION = -2;
+        /**
+         * waitStatus value to indicate the next acquireShared should
+         * unconditionally propagate
+         */
+        static final int PROPAGATE = -3;
+
+        volatile int waitStatus;
+
+        volatile Node prev;
+
+        volatile Node next;
+
+        volatile Thread thread;
+    }
+```
+
+我们根据这个 `Node` 的属性从而是把整个 `CLH` 队列的形状还原。
+
+- `thread`：每个节点都会绑定一个线程，代表等待的线程。可以理解为是 **把线程打包成节点**。
+
+- `waitStatus`：每个节点的属性，具体取值上面可以看上面：0（无属性）、CANCELLED、SIGNAL、CONDITION、PROPAGATE。
+
+- `pre`：前置节点。
+
+- `next`：后置节点。
+
+- `SHARED`/`EXCLUSIVE`：共享或者是独占模式。
 
 
 ### CLH 是天然的公平锁，非公平锁怎么办？
@@ -392,7 +456,6 @@ ReentrantLock的 公平模式 是通过 里面的 `sync` 类型来实现的：
 
 - **LockSupport**：`LockSupport` 的使用相对简单，不需要与特定的对象或锁关联。
 - **Object.wait / notify**：`Object.wait` 和 `notify` 必须在特定对象的上下文中使用，并且需要正确处理锁和异常，这使得它们的使用更加复杂。
-
 
 
 # 总结

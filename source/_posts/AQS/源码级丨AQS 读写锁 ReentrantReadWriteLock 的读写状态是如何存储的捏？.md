@@ -4,12 +4,14 @@ categories:
 cover: >-
   https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202311172154410.webp
 title: 源码级丨AQS 读写锁 ReentrantReadWriteLock 的读写状态是如何存储的捏？
-abbrlink: 6504
+abbrlink: 6501
 date: 2023-12-10 16:50:11
 updated: 2023-12-10 16:50:16
 tags:
 ---
-
+>**源码篇** 预防针💉：
+>**源码篇** 必然会有很多代码，希望大家不要有畏难情绪，虽然我也是看到一大串代码就头疼。
+>我贴代码只是为了方便我的文字解答，源码只是辅助我文字讲解，所以大家尽量关注我的文字就好啦。
 # 前言
 
 `ReentrantReadWriteLock` 也叫 **读写锁**，支持 **排他/共享** 特性是他的特点。
@@ -210,3 +212,9 @@ tags:
 到这里我们已经弄明白了 **写锁和读锁的状态存储以及如何获取读锁和写锁的次数**。
 
 但是我们还没有弄清 读锁和写锁之间的 **排他性和共享性** 是如何实现的，下篇文章就剖析关于 **写锁** 的核心逻辑！
+
+
+
+![85b6a1a2d29c98f28f5fc4aa584f54ba.jpg](https://hmf-typora-images.oss-cn-guangzhou.aliyuncs.com/images/202312112241047.jpg)
+
+> 来都来了，点个赞，留个言再走吧彦祖👍，这对我来说非常重要！
